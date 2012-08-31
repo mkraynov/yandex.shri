@@ -3,9 +3,569 @@
 <head>
     <title>Школы разработки интерфейсов</title>
 
-    <script type="text/javascript" src="scripts/libs/require.js" data-main="scripts/app"></script>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="scripts/libs/highlight/styles/idea.css">
+
+    <script type="text/javascript" src="scripts/libs/require-jquery.js" data-main="scripts/main"></script>
 </head>
 <body>
+    <div class="wrapper">
+        <div class="section">
+            <h3 class="section__header">Общие вопросы</h3>
+            <dl class="section__body">
+                <dt class="question">
+                    <p>Фамилия, имя, отчество</p>
+                </dt>
+                <dd class="answer">
+                    <p>Михаил Константинович Крайнов</p>
+                </dd>
+                <dt class="question">
+                    <p>E-mail</p>
+                </dt>
+                <dd class="answer">
+                    <p>xmedved13@gmail.com</p>
+                </dd>
+                <dt class="question">
+                    <p>Телефон</p>
+                </dt>
+                <dd class="answer">
+                    <p>8-963-999-01-20</p>
+                </dd>
+                <dt class="question">
+                    <p>Год рождения</p>
+                </dt>
+                <dd class="answer">
+                    <p>1987</p>
+                </dd>
+                <dt class="question">
+                    <p>Город, в котором живёте</p>
+                </dt>
+                <dd class="answer">
+                    <p>Москва</p>
+                </dd>
+                <dt class="question">
+                    <p>Вуз, факультет, специальность, кафедра</p>
+                </dt>
+                <dd class="answer">
+                    <p>ГТУ "МАИ",<br>
+                       факультет "Системы управления, информатика и электроэнергетика",<br>
+                       специальность "Электроэнергетические комплексы летательных аппаратов",<br>
+                       кафедра "Электроэнергетические, электромеханические и биотехнические системы"
+                    </p>
+                </dd>
+                <dt class="question">
+                    <p>Год окончания вуза</p>
+                </dt>
+                <dd class="answer">
+                    <p>2012</p>
+                </dd>
+                <dt class="question">
+                    <p>На каком уровне владеете английским языком?</p>
+                </dt>
+                <dd class="answer">
+                    <p>Свободно читаю и перевожу техническую литературу, чуть менее свободно – художественную. Смотрю и понимаю семинары, мастер-классы и презентации технической направленности, но не могу полноценно смотреть фильмы или сериалы.</p>
+                </dd>
+                <dt class="question">
+                    <p>Чего вы ожидаете от участия в Школе?</p>
+                </dt>
+                <dd class="answer">
+                    <p>Систематизировать уже известные знания о применяемых в работе технологиях; подчерпнуть новые знания в неизвестных областях, таких как HTML5 API, CSS3 Animations, Canvas и т.д.; подсмотреть, как устроен Яндекс изнутри.</p>
+                </dd>
+                <dt class="question">
+                    <p>Откуда вы о нас узнали?</p>
+                </dt>
+                <dd class="answer">
+                    <p>От veged'а на Я.Субботнике 2012 в Москве.</p>
+                </dd>
+                <dt class="question">
+                    <p>Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?</p>
+                </dt>
+                <dd class="answer">
+                    <p>Стажировке – несколько часов в неделю, в лучшем случае – один-два рабочих дня. Работе – несколько лет.</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="section">
+            <h3 class="section__header">Опыт разработки</h3>
+            <dl class="section__body">
+                <dt class="question">
+                    <p>Расскажите нам о вашем опыте разработки. Ничего не упускайте: это может быть как серьезный интерфейс, так и просто домашняя страничка.</p>
+                </dt>
+                <dd class="answer">
+                    <p>Начинал с верстки удаленно для шаблонизации сайтов на 1С-Битрикс. В какой-то момент перешел на полный день и занялся порталами с высокой нагрузкой. Участвовал в разработке проектов: strana.ru, filmpro.ru, gosloto.ru. В данный момент разрабатываю и являюсь тим-лидом фронт-энд команды портала filmpro.ru. За время работы над второй версией внедрил LESS-препроцессор, верстку независимыми блоками, RequireJS AMD.</p>
+                </dd>
+                <dt class="question">
+                    <p>Какие языки программирования, фреймворки и технологии вы использовали? Сложились ли у вас личные предпочтения?</p>
+                </dt>
+                <dd class="answer">
+                    <p>Основной язык программирования – JavaScript. Побочный – Java, т.к. бэк-энды не всегда доступны и что-то приходится писать самим. Основной фреймворк – jQuery. Очень хочется попробовать Dojo в продакшене, пока только эксперименты для себя. Смотрел JavaScript MVC-фреймворки, не увидел надобности в нашем случае. Из недавних интересных технологий, которые понравились: Handlebars для шаблонизации на клиенте, SASS (Compass) для сборки CSS (но с ним не сложилось, нет нормального сборщика под Java, используем LESS). Не понимаю эйфории по Twitter Bootstrap и HTML Boilerplate.</p>
+                </dd>
+                <dt class="question">
+                    <p>Какие редакторы и среды разработки вы использовали? Чем обычно пользуетесь?</p>
+                </dt>
+                <dd class="answer">
+                    <p>Использовал Notepad++ на винде, Coda на маке. Потом был Eclipse (STS, PDT). Сейчас только Intellij IDEA.</p>
+                </dd>
+                <dt class="question">
+                    <p>С какими ОС приходилось сталкиваться? Для каких целей вы их использовали?</p>
+                </dt>
+                <dd class="answer">
+                    <p>
+                        Все клиентские Windows, начиная с 95 и заканчивая 7. Использовались как основная система на домашнем компьютере.<br>
+                        Mac OS X 10.5+ – основная система сейчас дома и на работе, потому что удобнее для разработки и приятнее дома.<br>
+                        Linux (Debian, CentOS) - сервера приложений. Личный сервер на hetzner.de крутится на CentOS.<br>
+                        FreeBSD 7 когда-то давно, с целью поиграться.<br>
+                        iOS, Android, WP7, WinMo, Symbian. Цель: звонить.
+                    </p>
+                </dd>
+                <dt class="question">
+                    <p>Приходилось ли вам пользоваться системами контроля версий? Если да, то какими? Какая из них вам нравится больше всего?
+                </dt>
+                <dd class="answer">
+                    <p>Да, приходилось и приходится. SVN на работе. Git для этого резюме. SVN нравится больше, хотя Git гибче.</p>
+                </dd>
+                <dt class="question">
+                    <p>Использовали ли вы системы постановки и ведения задач?</p>
+                </dt>
+                <dd class="answer">
+                    <p>Да. Мегаплан, Redmine.</p>
+                </dd>
+                <dt class="question">
+                    <p>Какие полезные для фронтенд-разработчика ресурсы вы используете и можете посоветовать?</p>
+                </dt>
+                <dd class="answer">
+                    <p>
+                        Всегда под рукой: <a href="http://jqapi.com">документация по jQuery</a>, <a href="http://fontsquirrel.com">генератор пуленепробиваемого подключения шрифтов</a>, <a href="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js">исходники jQuery</a>, если что-то непонятно в документации или интересно, как реализовано; <a href="http://stackoverflow.com">stackoverflow</a>, если есть вопрос, то скорее всего там есть ответ.<br>
+                        Поисковики, оба два.<br>
+                        Ну и почитать, пока проект компилится или стартует: habrahabr.ru, paulirish.com, smashingmagazine.com
+                    </p>
+                </dd>
+                <dt class="question">
+                    <p>Работали ли вы где-нибудь? Какие у вас были должностные обязанности? Есть ли опыт работы в команде?</p>
+                </dt>
+                <dd class="answer">
+                    <p>Работаю сейчас. В обязанности входит верстка, написание скриптов, постановка задач другим фронт-эндерам. Опыт работы в команде есть.</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="section">
+            <h3 class="section__header">Технические задания из анкеты</h3>
+            <dl class="section__body">
+                <dt class="question">
+                    <p>Перечислите известные вам инструменты и приёмы для отладки кода в разных браузерах.</p>
+                </dt>
+                <dd class="answer">
+                    <p>Инструменты: Chrome Dev Tools, Safari Web Inspector, Firebug, Opera Dragonfly, IE Dev Tools.</p>
+                    <p>Приемы: подумать, потрейсить в консоль, поалертить (если нет консоли или она не помогает).</p>
+                </dd>
+                <dt class="question">
+                    <p>Опишите своими словами, что происходит в браузерах при клике на ссылку yandex.ru (полнота ответа – на ваше усмотрение).</p>
+                </dt>
+                <dd class="answer">
+                    <p>Браузер резолвит доменно имя у ближайшего DNS'a, формирует за прос к серверу и отправляет его.</p>
+                    <p>Кэшируюший прокси (nginx) получает запрос, отдает статику и закэшированный части страницы, формирование динамики отдает через балансировщики нагрузки на слой бизнес-логики.</p>
+                    <p>Браузер получает ответ от сервера, загружает код страницы и начинает её парсить. По дороге, встречая, скрипты и стили блокирует отрисовку страницы и грузит их. Когда вся страница распаршена и ДОМ готов, странится рендерится и грузятся картинки, асинхронные скрипты. После загрузки всех картинок и асинхронных скриптов происходит событие load.</p>
+                </dd>
+                <dt class="question">
+                    <p>Предположим, что мы представляем автосалон по продаже японских и немецких автомобилей. У нас есть базовые классы и примеры их использования. Допишите недостающий код.</p>
+                </dt>
+                <dd class="answer">
+                    <pre><code>
+                        define(function(){
 
+                            /**
+                            * Создает экземпляр Машины
+                            * @this {Car}
+                            * @param {string} manufacturer Производитель
+                            * @param {string} model Модель
+                            * @param {number} year Год производства
+                            */
+                            function Car(manufacturer, model, year) {
+                                this.manufacturer = manufacturer;
+                                this.model = model;
+                                this.year = year ? year : (new Date()).getFullYear();
+                            }
+
+                            Car.prototype.toString = function() {
+                                return this.manufacturer + " " + this.model + " " + this.year;
+                            }
+
+                            Car.prototype.getInfo = Car.prototype.toString;
+
+                            Car.prototype.getDetailedInfo = function() {
+                                var info = [];
+                                    info.push("Производитель:");
+                                    info.push(this.manufacturer + ".");
+                                    info.push("Модель:");
+                                    info.push(this.model + ".");
+                                    info.push("Год:");
+                                    info.push(this.year);
+                                return info.join(" ");
+                            }
+                            // console.log(bmw); // BMW X5 2010
+                            // console.log(bmw.getInfo()); // BMW X5 2010
+                            // console.log(bmw.getDetailedInfo()); // Производитель: BMW. Модель: X5. Год: 2010
+
+                            /**
+                            * Возвращает страну-производителя машины
+                            * @private
+                            * @return {String}
+                            */
+                            function getCountry() {
+                                switch (this.manufacturer.toLowerCase()) {
+                                    case 'bmw':
+                                    case 'audi':
+                                        return 'Germany';
+
+                                    case 'toyota':
+                                        return 'Japan';
+                                }
+                            }
+
+                            /**
+                            * Паблик-обертка для приватного метода getCountry
+                            * @public
+                            * @return {string}
+                            */
+                            Car.prototype.getCountry = function() {
+                                return getCountry.call(this);
+                            }
+
+                            return Car;
+                        });
+
+
+                        define(["/yandex/yandex.shri/scripts/libs/money.min.js"],function(money){
+
+                            // Настраиваем внешний скрипт обмена валюты
+                            money.base = "USD";
+                            money.rates = {
+                                "EUR": 0.811749,
+                                "JPY": 78.508434,
+                                "RUB": 32.078539
+                            };
+
+                            /**
+                            * Создает экземпляр Автосалона
+                            * @this {CarDealer}
+                            * @param {string} name Название автосалона
+                            */
+                            function CarDealer(name) {
+                                this.name = name;
+                                this.cars = [];
+                            }
+
+                            /**
+                            * Добавляет машины в автосалон, принимает одну или несколько машин
+                            * Возвращает инстанс автосалона для чейнинга
+                            * @public
+                            * @return {CarDealer}
+                            */
+                            CarDealer.prototype.add = function(){
+                                var i = arguments.length;
+                                while(i--) {
+                                    this.cars.push( Array.prototype.shift.call(arguments,arguments[i]) )
+                                }
+                                return this;
+                            }
+
+                            /**
+                            * Установить цену на машину
+                            * Возвращает инстанс автосалона для чейнинга
+                            * @public
+                            * @param {string} id идентификатор машины
+                            * @param {string} price стоимость
+                            * @return {CarDealer}
+                            */
+                            CarDealer.prototype.setPrice = function(id, price){
+                                var car = getCarById.call(this, id);
+
+                                if (car === null) {
+                                    console.log("CarDealer.prototype.setPrice: There's no car with id: " + id + " in " + this.name);
+                                }
+
+                                storePrice.call(this, car, price);
+
+                                return this;
+                            }
+
+                            /**
+                            * Находит машину по идентификатору
+                            * @private
+                            * @param {string} id идентификатор машины
+                            * @return {Car}
+                            */
+                            function getCarById(id){
+                                var car = null,
+                                    i;
+
+                                if (!(this instanceof CarDealer)) {
+                                    console.log("getCarById: wrong context");
+                                    return null;
+                                }
+
+                                for (i = this.cars.length; i--;) {
+                                    if (this.cars[i] && this.cars[i].toString() === id) {
+                                        return this.cars[i];
+                                    }
+                                }
+
+                                return car;
+                            }
+
+                            /**
+                            * Записывает информацию о цене на машину
+                            * @private
+                            * @param {Car} car
+                            * @param {string} price
+                            */
+                            function storePrice(car, price) {
+                                var reg = /^[0-9]*$/;
+
+                                price = money( reg.test(price.charAt(0)) ? price : price.slice(1) )
+                                            .from( detectCurrency(price) )
+                                            .to("RUB");
+
+                                console.log("RUB: " + price);
+                            }
+
+                            /**
+                            * Выводит в консоль список автомобилей в автосалоне
+                            * @public
+                            */
+                            CarDealer.prototype.list = function() {
+                                console.log(this.cars.join(", "));
+                            }
+
+                            /**
+                            * Выводит в консоль список автомобилей в автосалоне, отсортированный по стране
+                            * @public
+                            * @param {string} country
+                            */
+                            CarDealer.prototype.listByCountry = function(country) {
+                                var filteredArr = [],
+                                    i,
+                                    length = this.cars.length;
+
+                                for (i = 0; i < length; i++) {
+                                    if (this.cars[i].getCountry() === country) {
+                                        filteredArr.push(this.cars[i]);
+                                    }
+                                }
+
+                               console.log(filteredArr.join(", "));
+                            }
+
+
+                            /**
+                            * Определяет валюту и возвращает ее международный код для обменника
+                            * @param {string} price цена
+                            * @return {String}
+                            */
+                            function detectCurrency(price) {
+                                switch (price.charAt(0)) {
+                                    case "€":
+                                        return "EUR";
+                                    case "¥":
+                                        return "JPY";
+                                    default:
+                                        return "RUB";
+                                }
+                            }
+
+                            return CarDealer;
+                        })
+
+
+                        require.config({
+                            baseUrl: "/yandex/yandex.shri/scripts/modules/"
+                        })
+                        require(["Car","CarDealer"], function(Car,CarDealer){
+
+                            bmw = new Car("BMW", "X5", 2010);
+                            audi = new Car("Audi", "Q5", 2012);
+                            toyota = new Car("Toyota", "Camry");
+
+                            yandex = new CarDealer('Яндекс.Авто');
+
+                            yandex
+                                .add(toyota)
+                                .add(bmw, audi);
+
+                            // @TODO: реализовать метод установки цены на машину
+                            /**
+                            * Установить цену на машину
+                            * @param {string} car идентификатор машины
+                            * @param {string} price стоимость
+                            */
+                            // идентификатор машины составляется следующим образом "производитель модель год"
+                            // стоимость машины может быть задана в двух валютах: йена и евро.
+                            yandex
+                                .setPrice('BMW X5 2010', '€2000')
+                                .setPrice('Audi Q5 2012', '€3000')
+                                .setPrice('Toyota Camry 2012', '¥3000');
+
+                            yandex.list(); //BMW X5 2010, Audi Q5 2012, Toyota Camry 2012
+                            yandex.listByCountry('Germany'); //BMW X5 2010, Audi Q5 2012
+
+                            // @TODO: бонус! выводить список машин с ценой в рублях.
+
+                        });
+                    </code></pre>
+                </dd>
+                <dt class="question">
+                    Дана программа, реализованная одновременно на Bash, Python и Perl. Программа принимает произвольное количество аргументов и печатает их количество. Нужно добавить опцию -v для verbose-режима, в котором дополнительно выводится значение каждого из аргументов.
+                </dt>
+                <dd class="answer">
+                    <pre><code>
+                        #!/usr/bin/env bash
+
+                        usage() {
+                        cat << EOF
+                        Usage: printargs.sh [OPTIONS] [ARGUMENTS]
+                            Print the number of arguments.
+
+                        OPTIONS:
+                            -h      print help message
+                            -m MSG  custom message
+                            -v	  verbose mode
+
+                        Examples:
+                            printargs.sh a b c
+                            printargs.sh -m 'Arguments count: ' a b c
+                            printargs.sh -h
+                            printargs.sh -v a b c
+
+                        EOF
+                        }
+
+                        PRINTARG=false
+
+                        while getopts “hm:v” OPTION
+                        do
+                            case $OPTION in
+                                h)
+                                    usage
+                                    exit 1
+                                    shift;;
+                                m)
+                                    MESSAGE=$OPTARG
+                                    shift;shift;;
+                                v)
+                                    PRINTARG=true
+                                    shift;;
+                            esac
+                        done
+
+                        COUNT=0
+
+                        for ARG in $@; do
+                            if [[ $PRINTARG == true ]]; then
+                                echo $ARG
+                            fi
+                            let COUNT+=1
+                        done
+
+                        if [[ "$MESSAGE" != "" ]]; then
+                            echo $MESSAGE
+                        fi
+
+                        echo $COUNT
+                    </code></pre>
+                    <pre><code>
+                        #!/usr/bin/env python
+
+                        import argparse
+
+                        parser = argparse.ArgumentParser(description='Print the number of arguments.')
+                        parser.add_argument('arguments', metavar='ARG', type=str, nargs='*', help='some arguments')
+                        parser.add_argument('-m', dest='message', default='', help='custom message')
+                        parser.add_argument('-v', dest='printargs', action='store_true', help='verbose mode')
+
+                        args = parser.parse_args()
+
+                        count = 0
+
+                        for a in args.arguments:
+                            if args.printargs:
+                                print(a)
+                            count += 1
+
+                        if args.message != '':
+                            print(args.message)
+
+                        print(count)
+                    </code></pre>
+                    <pre><code>
+                        #!/usr/bin/env perl
+
+                        use strict;
+                        use Getopt::Long;
+                        use Pod::Usage;
+
+                        my $help;
+                        my $message = '';
+                        my $arg;
+                        my $printargs;
+
+                        @ARGV and GetOptions(
+                            "h" => \$help,
+                            "m:s" => \$message,
+                            "v" => \$printargs,
+                        ) or pod2usage(1);
+                        pod2usage(-verbose => 2, -exitval => 2) if $help;
+
+                        my $count = 0;
+
+                        foreach $arg (@ARGV) {
+                            if($printargs eq 1) {
+                                print($arg . "\n");
+                            }
+                        $count++;
+                        }
+
+                        if($message ne "") {
+                            print($message . "\n");
+                        }
+
+                        print($count . "\n");
+
+                        __END__
+
+                        =head1 NAME
+
+                            printargs.pl - Print the number of arguments.
+
+                        =head1 SYNOPSIS
+
+                            printargs.pl [options] [arguments]
+
+                        =head1 OPTIONS
+
+                            -h      Show help message.
+
+                            -m MSG  Specify a custom message.
+
+                            -v      Verbose mode
+
+                        =head1 EXAMPLE
+
+                            printargs.pl a b c
+
+                            printargs.pl -m 'Arguments count: ' a b c
+
+                            printargs.pl -h
+
+                            printargs.pl -v a b c
+
+                    </code></pre>
+
+                </dd>
+            </dl>
+        </div>
+    </div>
 </body>
 </html>

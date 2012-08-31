@@ -6,17 +6,17 @@
  * To change this template use File | Settings | File Templates.
  */
 require.config({
-    baseUrl: "/scripts/modules"
+    baseUrl: "/yandex/yandex.shri/scripts/modules/"
 })
 require(["Car","CarDealer"], function(Car,CarDealer){
 
-    var bmw = new Car("BMW", "X5", 2010),
-        audi = new Car("Audi", "Q5", 2012),
-        toyota = new Car("Toyota", "Camry");
+    bmw = new Car("BMW", "X5", 2010);
+    audi = new Car("Audi", "Q5", 2012);
+    toyota = new Car("Toyota", "Camry");
 
 
 
-    var yandex = new CarDealer('Яндекс.Авто');
+    yandex = new CarDealer('Яндекс.Авто');
 
     yandex
         .add(toyota)

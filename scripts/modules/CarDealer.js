@@ -5,7 +5,16 @@
  * Time: 9:35 PM
  * To change this template use File | Settings | File Templates.
  */
-define(function(){
+define(["/yandex/yandex.shri/scripts/libs/money.min.js"],function(money){
+
+    // Настраиваем внешний скрипт обмена валюты
+    money.base = "USD";
+    money.rates = {
+        "EUR": 0.811749,
+        "JPY": 78.508434,
+        "RUB": 32.078539
+    };
+
     /**
      * Создает экземпляр Автосалона
      * @this {CarDealer}
@@ -18,52 +27,25 @@ define(function(){
 
     /**
      * Добавляет машины в автосалон, принимает одну или несколько машин
+     * Возвращает инстанс автосалона для чейнинга
      * @public
+     * @return {CarDealer}
      */
     CarDealer.prototype.add = function(){
-        if (arguments.length === 1) {
-            addCar.call(this, arguments[0]);
-        } else if (arguments.length > 1) {
-            addCars.apply(this, arguments);
-        }
-    }
-
-    /**
-     * Добавляет машину в автосалон
-     * @private
-     * @param {Car} car машина
-     */
-    function addCar(car){
-        if (!(this instanceof CarDealer)) {
-            console.log("addCar: wrong context");
-            return;
-        }
-
-        this.cars.push(car);
-    }
-
-    /**
-     * Добавляет несколько машин в автосалон
-     * @private
-     * @param {Array} carArray массив машин
-     */
-    function addCars(carArray){
-        if (!(this instanceof CarDealer)) {
-            console.log("addCars: wrong context");
-            return;
-        }
-
-        var i = carArray.length;
+        var i = arguments.length;
         while(i--) {
-            addCar.call(this,carArray.shift());
+            this.cars.push( Array.prototype.shift.call(arguments,arguments[i]) )
         }
+        return this;
     }
 
     /**
      * Установить цену на машину
+     * Возвращает инстанс автосалона для чейнинга
      * @public
      * @param {string} id идентификатор машины
      * @param {string} price стоимость
+     * @return {CarDealer}
      */
     CarDealer.prototype.setPrice = function(id, price){
         var car = getCarById.call(this, id);
@@ -73,6 +55,8 @@ define(function(){
         }
 
         storePrice.call(this, car, price);
+
+        return this;
     }
 
     /**
@@ -106,7 +90,13 @@ define(function(){
      * @param {string} price
      */
     function storePrice(car, price) {
+        var reg = /^[0-9]*$/;
 
+        price = money( reg.test(price.charAt(0)) ? price : price.slice(1) )
+                    .from( detectCurrency(price) )
+                    .to("RUB");
+
+        console.log("RUB: " + price);
     }
 
     /**
@@ -134,6 +124,23 @@ define(function(){
         }
 
         console.log(filteredArr.join(", "));
+    }
+
+
+    /**
+     * Определяет валюту и возвращает ее международный код для обменника
+     * @param {string} price цена
+     * @return {String}
+     */
+    function detectCurrency(price) {
+        switch (price.charAt(0)) {
+            case "€":
+                return "EUR";
+            case "¥":
+                return "JPY";
+            default:
+                return "RUB";
+        }
     }
 
     return CarDealer;

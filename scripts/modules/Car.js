@@ -17,7 +17,7 @@ define(function(){
     function Car(manufacturer, model, year) {
         this.manufacturer = manufacturer;
         this.model = model;
-        this.year = year ? year : (new Date()).getYear();
+        this.year = year ? year : (new Date()).getFullYear();
     }
 
     Car.prototype.toString = function() {
